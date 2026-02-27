@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Emergencia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel="icon" type="image/png" href="images/eme.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>WHERE ARE MY KEYS ?</h1>
+        <h4>Menos tiempo buscando, más tiempo viviendo</h4>
+    </div>
+
+
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="crear-planos.html" class="active">Crear planos</a></li>
+            <li><a href="index.html">Localizador</a></li>
+            <li><a href="emergencia.html">Emergencia</a></li>
+        </ul>
+    </nav>
+
+
+
+    <form action="" method="post">
+        <div>
+            <label for="name"> Nombre</label>
+            <input type="text" id="name" placeholder="Tu nombre" />
+        </div>
+        <div>
+            <label for="motivo">Motivo</label>
+            <select id="motivo">
+                <option value="" disabled selected hidden>Elige una opción...</option>
+                <option value="fuera">Me he quedado fuera (Llaves dentro)</option>
+                <option value="perder">He perdido las llaves en la calle</option>
+                <option value="problema">Cerradura forzada / Problema de seguridad</option>
+            </select>
+        </div>
+        <div>
+            <label for="ubi">Ubicación actual</label>
+            <input type="text" id="ubi" placeholder="Tu ubicación" />
+        </div>
+        <div class="subir-foto">
+            <label for="foto">Añadir foto del objeto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

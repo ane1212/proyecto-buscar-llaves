@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Where are my keys?</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel="icon" type="image/png" href="images/llave.png">
+
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>WHERE ARE MY KEYS ?</h1>
+        <h4>Menos tiempo buscando, más tiempo viviendo</h4>
+    </div>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="crear-planos.html">Crear planos</a></li>
+            <li><a href="index.html" class="active">Localizador</a></li>
+            <li><a href="emergencia.html">Emergencia</a></li>
+        </ul>
+    </nav>
+
+    <div class="llave">
+        <h4>Coloca tu llave en tu casa:</h4>
+        <img src="images/llave.png" alt="llave" width="30" height="30">
+    </div>
+
+    <img src="images/plano2d.png" usemap="#plano-600" width="600" height="600" style="display: block;">
+
+    <map name="plano-600">
+        <area target="_self" alt="Cocina" title="Cocina" href="#cocina" coords="50,145,220,355" shape="rect">
+
+        <area target="_self" alt="Salón" title="Salón" href="#salon" coords="221,145,340,280" shape="rect">
+
+        <area target="_self" alt="Habitación Principal" title="Habitación Principal" href="#hab-principal"
+            coords="341,145,530,315" shape="rect">
+
+        <area target="_self" alt="Habitación Secundaria" title="Habitación Secundaria" href="#hab-secundaria"
+            coords="372,320,530,460" shape="rect">
+
+        <area target="_self" alt="Baño General" title="Baño General" href="#bano1" coords="195,360,275,460"
+            shape="rect">
+
+        <area target="_self" alt="Baño Suite" title="Baño Suite" href="#bano2" coords="276,360,370,460" shape="rect">
+
+        <area target="_self" alt="Hall" title="Hall" href="#hall" coords="221,281,370,358" shape="rect">
+    </map>
+
+
+    <div class="quick-log">
+        <h3>Últimos avistamientos</h3>
+
+        <div class="log-item">
+            <span class="time">Hace 2 horas</span>
+            <p>"Entré por la puerta y las dejé en la mesa del salón."</p>
+            <span class="tag">Salón</span>
+        </div>
+
+        <div class="log-item">
+            <span class="time">Ayer</span>
+            <p>"Estaban en el bolsillo de la chaqueta azul."</p>
+            <span class="tag">Habitación</span>
+        </div>
+    </div>
+</body>
+
+</html>

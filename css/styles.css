@@ -1,0 +1,115 @@
+* {}
+
+body {
+    background-color: aliceblue;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav ul {
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 25px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.main-nav a.active {
+    background-color: blueviolet;
+    color: white;
+}
+
+.main-nav a:hover:not(.active) {
+    background-color: #f0e6ff;
+    color: blueviolet;
+}
+
+nav>ul {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    text-align: center;
+    color: blueviolet;
+    gap: 5px;
+    padding: 5px;
+}
+
+/* Estilo para el botón de la página actual */
+.main-nav a.active {
+    background-color: blueviolet;
+    /* Color de fondo fuerte */
+    color: white;
+    /* Texto en blanco para que contraste */
+    box-shadow: 0 4px 10px rgba(138, 43, 226, 0.3);
+    /* Sombra para que "flote" */
+    cursor: default;
+    /* Cambia el cursor para indicar que ya estás ahí */
+}
+
+/* Opcional: que el botón activo no cambie al pasar el ratón */
+.main-nav a.active:hover {
+    background-color: blueviolet;
+    color: white;
+    transform: none;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.llave {
+    display: flex;
+    align-content: center;
+
+}
+
+.llave h4 {
+    margin: 0;
+}
+
+.card-form {
+    background-color: white;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    /* Sombra muy suave */
+    font-family: 'Segoe UI', sans-serif;
+}
