@@ -26,48 +26,102 @@
         </ul>
     </nav>
 
-    <div class="llave">
-        <h4>Coloca tu llave en tu casa:</h4>
-        <img src="images/llave.png" alt="llave" width="30" height="30">
-    </div>
 
-    <img src="images/plano2d.png" usemap="#plano-600" width="600" height="600" style="display: block;">
+    <main class="container-cards">
+        <div class="card-form">
 
-    <map name="plano-600">
-        <area target="_self" alt="Cocina" title="Cocina" href="#cocina" coords="50,145,220,355" shape="rect">
-
-        <area target="_self" alt="Salón" title="Salón" href="#salon" coords="221,145,340,280" shape="rect">
-
-        <area target="_self" alt="Habitación Principal" title="Habitación Principal" href="#hab-principal"
-            coords="341,145,530,315" shape="rect">
-
-        <area target="_self" alt="Habitación Secundaria" title="Habitación Secundaria" href="#hab-secundaria"
-            coords="372,320,530,460" shape="rect">
-
-        <area target="_self" alt="Baño General" title="Baño General" href="#bano1" coords="195,360,275,460"
-            shape="rect">
-
-        <area target="_self" alt="Baño Suite" title="Baño Suite" href="#bano2" coords="276,360,370,460" shape="rect">
-
-        <area target="_self" alt="Hall" title="Hall" href="#hall" coords="221,281,370,358" shape="rect">
-    </map>
+            <div class="mapa-interactivo">
+                <h2>Coloca tu llave</h2>
 
 
-    <div class="quick-log">
-        <h3>Últimos avistamientos</h3>
+                <input type="radio" name="habitacion" id="radio-cocina" class="radio-hidden">
+                <input type="radio" name="habitacion" id="radio-salon" class="radio-hidden">
+                <input type="radio" name="habitacion" id="radio-hab1" class="radio-hidden">
+                <input type="radio" name="habitacion" id="radio-hab2" class="radio-hidden"> <input type="radio"
+                    name="habitacion" id="radio-bano1" class="radio-hidden">
+                <input type="radio" name="habitacion" id="radio-bano2" class="radio-hidden"> <input type="radio"
+                    name="habitacion" id="radio-hall" class="radio-hidden">
 
-        <div class="log-item">
-            <span class="time">Hace 2 horas</span>
-            <p>"Entré por la puerta y las dejé en la mesa del salón."</p>
-            <span class="tag">Salón</span>
+                <img src="images/plano2d.png" width="600" height="600" class="plano-img">
+
+                <div class="llave-marker">
+                    <img src="images/llave.png" alt="llave" width="40">
+                </div>
+
+                <label for="radio-cocina" class="zona-click"
+                    style="top: 145px; left: 50px; width: 170px; height: 210px;"></label>
+                <label for="radio-salon" class="zona-click"
+                    style="top: 145px; left: 221px; width: 119px; height: 135px;"></label>
+                <label for="radio-hab1" class="zona-click"
+                    style="top: 145px; left: 341px; width: 189px; height: 170px;"></label>
+
+                <label for="radio-hab2" class="zona-click"
+                    style="top: 320px; left: 372px; width: 158px; height: 140px;"></label>
+
+                <label for="radio-bano1" class="zona-click"
+                    style="top: 360px; left: 195px; width: 80px; height: 100px;"></label>
+
+                <label for="radio-bano2" class="zona-click"
+                    style="top: 360px; left: 276px; width: 94px; height: 100px;"></label>
+
+                <label for="radio-hall" class="zona-click"
+                    style="top: 281px; left: 221px; width: 149px; height: 77px;"></label>
+            </div>
         </div>
+        <div class="card-form">
+            <h2>Contactos de Respaldo</h2>
 
-        <div class="log-item">
-            <span class="time">Ayer</span>
-            <p>"Estaban en el bolsillo de la chaqueta azul."</p>
-            <span class="tag">Habitación</span>
+            <div class="contact-card">
+                <div class="info-principal">
+                    <div class="contact-header">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M144 336C144 288.7 109.8 249.4 64.8 241.5C72 177.6 126.2 128 192 128L448 128C513.8 128 568 177.6 575.2 241.5C530.2 249.5 496 288.7 496 336L496 368L144 368L144 336zM0 448L0 336C0 309.5 21.5 288 48 288C74.5 288 96 309.5 96 336L96 416L544 416L544 336C544 309.5 565.5 288 592 288C618.5 288 640 309.5 640 336L640 448C640 483.3 611.3 512 576 512L64 512C28.7 512 0 483.3 0 448z" />
+                            </svg>
+                        </div>
+                        <span class="tag-badge">Salón</span>
+                    </div>
+
+                    <div class="details-text">
+                        <p>"Entré por la puerta y las dejé en la mesa del salón."</p><span>Hace 2 horas</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="contact-card">
+                <div class="info-principal">
+                    <div class="contact-header">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M64 96C81.7 96 96 110.3 96 128L96 352L320 352L320 224C320 206.3 334.3 192 352 192L512 192C565 192 608 235 608 288L608 512C608 529.7 593.7 544 576 544C558.3 544 544 529.7 544 512L544 448L96 448L96 512C96 529.7 81.7 544 64 544C46.3 544 32 529.7 32 512L32 128C32 110.3 46.3 96 64 96zM144 256C144 220.7 172.7 192 208 192C243.3 192 272 220.7 272 256C272 291.3 243.3 320 208 320C172.7 320 144 291.3 144 256z" />
+                            </svg>
+                        </div>
+                        <span class="tag-badge">Habitación</span>
+                    </div>
+
+                    <div class="details-text">
+                        <p>"Estaban en el bolsillo de la chaqueta azul."</p>
+                        <span>Ayer</span>
+                    </div>
+                </div>
+
+            </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Where Are My Keys? - Menos tiempo buscando.</p>
+            <div class="footer-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Soporte</a>
+                <a href="mailto:info@wherekeys.com">Contacto</a>
+            </div>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>
