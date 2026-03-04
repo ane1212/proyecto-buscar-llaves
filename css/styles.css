@@ -2,9 +2,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-    background-color: aliceblue;
-    font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+   background-color: aliceblue;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 
@@ -75,7 +82,6 @@ nav>ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-
 }
 
 a {
@@ -228,9 +234,7 @@ h2 {
     flex-shrink: 0;
 }
 
-
-
-.info-principal {
+.primary-info {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -276,11 +280,17 @@ h2 {
 
 /* Sección de localizador */
 /* Contenedor relativo para que todo se posicione dentro */
-.mapa-interactivo {
+.interactive-map {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: min(100%, 600px);
+    aspect-ratio: 1 / 1;
     margin: 20px auto;
+}
+
+.plano-img {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .radio-hidden {
@@ -288,7 +298,7 @@ h2 {
 }
 
 /* Estilo de la llave */
-.llave-marker {
+.key-marker {
     position: absolute;
     z-index: 5;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -296,7 +306,7 @@ h2 {
     opacity: 0;
 }
 
-.zona-click {
+.click-zone {
     position: absolute;
     cursor: pointer;
     z-index: 10;
@@ -304,53 +314,47 @@ h2 {
 
 /* --- LÓGICA DE POSICIONAMIENTO --- */
 
-#radio-cocina:checked~.llave-marker {
+#radio-cocina:checked~.key-marker {
     opacity: 1;
-    top: 220px;
-    left: 110px;
+    top: 36.6667%;
+    left: 18.3333%;
 }
 
-#radio-salon:checked~.llave-marker {
+#radio-salon:checked~.key-marker {
     opacity: 1;
-    top: 190px;
-    left: 260px;
+    top: 31.6667%;
+    left: 43.3333%;
 }
 
-#radio-hab1:checked~.llave-marker {
+#radio-hab1:checked~.key-marker {
     opacity: 1;
-    top: 215px;
-    left: 415px;
+    top: 35.8333%;
+    left: 69.1667%;
     transform: scale(1.1);
 }
 
-#radio-bano:checked~.llave-marker {
+#radio-hab2:checked~.key-marker {
     opacity: 1;
-    top: 390px;
-    left: 215px;
+    top: 63.3333%;
+    left: 73.3333%;
 }
 
-#radio-hab2:checked~.llave-marker {
+#radio-bano1:checked~.key-marker {
     opacity: 1;
-    top: 380px;
-    left: 440px;
+    top: 66.6667%;
+    left: 37.5%;
 }
 
-#radio-bano1:checked~.llave-marker {
+#radio-bano2:checked~.key-marker {
     opacity: 1;
-    top: 400px;
-    left: 225px;
+    top: 66.6667%;
+    left: 52.5%;
 }
 
-#radio-bano2:checked~.llave-marker {
+#radio-hall:checked~.key-marker {
     opacity: 1;
-    top: 400px;
-    left: 315px;
-}
-
-#radio-hall:checked~.llave-marker {
-    opacity: 1;
-    top: 310px;
-    left: 285px;
+    top: 51.6667%;
+    left: 47.5%;
 }
 
 /*Footer*/
@@ -358,7 +362,7 @@ h2 {
     background-color: #ffffff;
     border-top: 1px solid #eee;
     padding: 20px 0;
-    margin-top: 40px;
+    margin-top: auto;
     color: #888;
     font-size: 0.85rem;
 }
@@ -387,10 +391,72 @@ h2 {
     color: blueviolet;
 }
 
+/*Responsive*/
 @media (max-width: 600px) {
+    .main-nav {
+        padding: 10px 12px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: min(320px, 100%);
+        gap: 8px;
+        border-radius: 16px;
+        padding: 10px;
+    }
+
+    .main-nav li,
+    .main-nav a {
+        width: 100%;
+    }
+
+    .main-nav a {
+        text-align: center;
+        padding: 10px 14px;
+    }
+
+    .container-cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    }
+
+    .card-form {
+    width: 100%;
+    max-width: 450px;
+    flex: 1 1 auto;
+    }
+
+
     .footer-content {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
+}
+
+
+@media (min-width: 601px) and (max-width: 950px) {
+  .container-cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card-form {
+    width: min(92%, 700px);
+    flex: 1 1 auto;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: min(520px, 100%);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
 }
