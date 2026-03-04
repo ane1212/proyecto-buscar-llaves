@@ -223,17 +223,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-.icon {
-    width: 40px;
-    height: 40px;
-    background-color: #f0e6ff;
-    border-radius: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
 .primary-info {
     display: flex;
     flex-direction: column;
