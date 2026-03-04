@@ -7,7 +7,7 @@
     <title>Emergencia</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
-    <link rel="icon" type="image/png" href="images/eme.png">
+    <link rel="icon" type="image/png" href="images/arquitecto.png">
 </head>
 
 <body>
@@ -15,8 +15,6 @@
         <h1>WHERE ARE MY KEYS ?</h1>
         <h4>Menos tiempo buscando, más tiempo viviendo</h4>
     </div>
-
-
 
     <nav class="main-nav">
         <ul>
@@ -26,32 +24,48 @@
         </ul>
     </nav>
 
+    <div class="container-cards">
+        <main class="card-form">
+            <h2>Registrar nueva vivienda</h2>
 
+            <form action="crear-planos.html" method="post">
+                <div class="form-group">
+                    <label class="form-label" for="name"> Nombre propiedad</label>
+                    <input class="form-input" type="text" id="name" placeholder="Tu nombre" required />
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="motivo-input">Tipo de propiedad </label>
+                    <input class="form-input" list="motivos-lista" id="motivo-input"
+                        placeholder="Haz clic para ver opciones...">
 
-    <form action="" method="post">
-        <div>
-            <label for="name"> Nombre</label>
-            <input type="text" id="name" placeholder="Tu nombre" />
-        </div>
-        <div>
-            <label for="motivo">Motivo</label>
-            <select id="motivo">
-                <option value="" disabled selected hidden>Elige una opción...</option>
-                <option value="fuera">Me he quedado fuera (Llaves dentro)</option>
-                <option value="perder">He perdido las llaves en la calle</option>
-                <option value="problema">Cerradura forzada / Problema de seguridad</option>
-            </select>
-        </div>
-        <div>
-            <label for="ubi">Ubicación actual</label>
-            <input type="text" id="ubi" placeholder="Tu ubicación" />
-        </div>
-        <div class="subir-foto">
-            <label for="foto">Añadir foto del objeto:</label>
-            <input type="file" id="foto" name="foto" accept="image/*">
-        </div>
-        <button type="submit">Enviar</button>
-    </form>
+                    <datalist class="form-datalist" id="motivos-lista">
+                        <option value="Piso">
+                        <option value="Chalet">
+                        <option value="Oficina">
+                        <option value="Trastero">
+                    </datalist>
+                </div>
+                <div class="form-row" style="display: flex; gap: 10px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label" for="altura">Altura Techo (m)</label>
+                        <input class="form-input" type="number" id="altura" step="0.1" placeholder="2.5">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label" for="plantas">Nº de Plantas</label>
+                        <input class="form-input" type="number" id="plantas" value="1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="foto">Subir plano</label>
+                    <input class="form-file" type="file" id="foto" name="foto" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <button class='form-button' type="submit">Generar planos</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
 </body>
 
 </html>
