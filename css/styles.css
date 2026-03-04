@@ -30,7 +30,6 @@ body {
     display: flex;
     justify-content: center;
     padding: 15px 0;
-    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -229,12 +228,7 @@ h2 {
     flex-shrink: 0;
 }
 
-.icon svg {
-    width: 24px;
-    height: 24px;
-    color: blueviolet;
-    display: block;
-}
+
 
 .info-principal {
     display: flex;
