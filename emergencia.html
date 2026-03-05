@@ -94,8 +94,6 @@
             </div>
         </div>
 
-
-
         <div class="card-form">
             <h2>Reportar emergencia</h2>
 
@@ -105,26 +103,24 @@
                     <input class="form-input" type="text" id="name" placeholder="Tu nombre" required />
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="motivo-input">Motivo de emergencia</label>
-                    <input class="form-input" list="motivos-lista" id="motivo-input"
+                    <label class="form-label" for="reason-input">Motivo de emergencia</label>
+                    <input class="form-input" list="reasons-list" id="reason-input"
                         placeholder="Haz clic para ver opciones...">
 
-                    <datalist class="form-datalist" id="motivos-lista">
+                    <datalist class="form-datalist" id="reasons-list">
                         <option value="Me he quedado fuera (Llaves dentro)">
                         <option value="He perdido las llaves en la calle">
                         <option value="Cerradura forzada / Seguridad">
                     </datalist>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="ubi">Ubicación actual</label>
-                    <input class="form-input" type="text" id="ubi" placeholder="Tu ubicación" required />
+                    <label class="form-label" for="location">Ubicación actual</label>
+                    <input class="form-input" type="text" id="location" placeholder="Tu ubicación" required />
                 </div>
                 <div class="form-group">
                     <button class='form-button' type="submit">Enviar</button>
                 </div>
             </form>
-
-
         </div>
     </main>
     <footer class="main-footer">
